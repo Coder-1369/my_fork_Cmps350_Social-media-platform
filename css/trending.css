@@ -1,0 +1,375 @@
+/* ========== Layout ========== */
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #fdf6f0;
+}
+
+.sidebar {
+    width: 200px;
+    min-height: 100vh;
+    background-color: #fdf6f0;
+    border-right: 1px solid #f0ddd0;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-brand {
+    margin-bottom: 40px;
+}
+
+.sidebar-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2a1a0e;
+}
+
+.sidebar-subtitle {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a08672;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #5b4638;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-item:hover {
+    background-color: #f5e3d4;
+    color: #3a2a1e;
+}
+
+.nav-item.active {
+    background-color: #fce8d8;
+    color: #e86f00;
+    font-weight: 600;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* ========== Main Area ========== */
+
+.trending-main {
+    flex: 1;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ========== Top Bar ========== */
+
+.trending-topbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 32px;
+    border-bottom: 1px solid #f0e4da;
+}
+
+.topbar-logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #e86f00;
+    font-style: italic;
+}
+
+/* ========== Content ========== */
+
+.trending-content {
+    padding: 40px 48px 60px;
+    max-width: 760px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.trending-header {
+    margin-bottom: 36px;
+}
+
+.trending-title {
+    margin: 0 0 10px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2a1a0e;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trending-icon-title {
+    font-style: normal;
+    font-size: 1.9rem;
+}
+
+.trending-title .highlight {
+    color: #e86f00;
+}
+
+.trending-description {
+    margin: 0;
+    color: #7a6555;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 560px;
+}
+
+/* ========== Trending List ========== */
+
+.trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ========== Trending Row ========== */
+
+.trending-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #ffffff;
+    border: 1px solid #f0e4da;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.trending-row:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+/* Top-3 highlight border */
+.trending-row.rank-1 { border-left: 4px solid #FFD700; }
+.trending-row.rank-2 { border-left: 4px solid #C0C0C0; }
+.trending-row.rank-3 { border-left: 4px solid #CD7F32; }
+
+/* ========== Rank Badge ========== */
+
+.rank-badge {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    background-color: #f5e8dc;
+    color: #7a5c44;
+}
+
+.rank-badge.rank-1 {
+    background-color: #FFF4CC;
+    color: #B8860B;
+    font-size: 1.2rem;
+}
+
+.rank-badge.rank-2 {
+    background-color: #F0F0F0;
+    color: #707070;
+    font-size: 1.2rem;
+}
+
+.rank-badge.rank-3 {
+    background-color: #F8EDE4;
+    color: #8B4513;
+    font-size: 1.2rem;
+}
+
+/* ========== User Avatar ========== */
+
+.trending-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    border: 3px solid #f5dcc8;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* ========== User Info ========== */
+
+.trending-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.trending-name {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2a1a0e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trending-bio {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #8a7565;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ========== Follower Count ========== */
+
+.follower-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.follower-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e86f00;
+    line-height: 1;
+}
+
+.follower-label {
+    font-size: 0.7rem;
+    color: #a08672;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+}
+
+/* ========== Follow Button ========== */
+
+.follow-btn {
+    padding: 9px 20px;
+    border-radius: 22px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    flex-shrink: 0;
+}
+
+.follow-btn.follow {
+    background-color: transparent;
+    color: #e86f00;
+    border: 2px solid #e86f00;
+}
+
+.follow-btn.follow:hover {
+    background-color: #fff5ec;
+}
+
+.follow-btn.following {
+    background-color: #e86f00;
+    color: #ffffff;
+    border: 2px solid #e86f00;
+}
+
+.follow-btn.following:hover {
+    background-color: #d46300;
+    border-color: #d46300;
+}
+
+/* Hide follow button for own row */
+.follow-btn.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ========== Empty State ========== */
+
+.trending-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #a08672;
+    font-size: 1rem;
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 60px;
+        padding: 24px 8px;
+        align-items: center;
+    }
+
+    .sidebar-brand {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 10px;
+        font-size: 0;
+    }
+
+    .nav-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .trending-main {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 540px) {
+    .trending-content {
+        padding: 28px 18px 48px;
+    }
+
+    .trending-title {
+        font-size: 1.7rem;
+    }
+
+    .trending-bio {
+        display: none;
+    }
+}
