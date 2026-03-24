@@ -1,16 +1,3 @@
-const AVATAR_COLORS = [
-    "#d4845a", "#c27a4e", "#b08060", "#a87050",
-    "#c99070", "#b5785a", "#d09878", "#a86848"
-];
-
-function getAvatarColor(userId) {
-    let hash = 0;
-    for (let i = 0; i < userId.length; i++) {
-        hash = userId.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
-}
-
 function getCurrentUser() {
     const session = getSession();
     if (!session) {
