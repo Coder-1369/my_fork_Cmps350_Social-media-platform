@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUGeeks | Explore</title>
+    <title>QUGeeks | Popular</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="css/trending.css">
     <script src="js/utils.js"></script>
     <script src="js/storage.js"></script>
-    <script src="js/explore.js" defer></script>
+    <script src="js/trending.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
                 </svg>
                 Home
             </a>
-            <a href="explore.html" class="nav-item active">
+            <a href="explore.html" class="nav-item">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8" />
@@ -43,7 +45,7 @@
                 </svg>
                 Profile
             </a>
-            <a href="trending.html" class="nav-item">
+            <a href="trending.html" class="nav-item active">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
@@ -63,22 +65,24 @@
         </nav>
     </aside>
 
-    <main class="explore-main">
-        <header class="explore-topbar">
+    <main class="trending-main">
+        <header class="trending-topbar">
             <span class="topbar-logo">QUGeeks</span>
         </header>
 
-        <section class="explore-content">
-            <div class="explore-header">
-                <h1 class="explore-title">Explore the <span class="highlight">Network</span></h1>
-                <p class="explore-description">
-                    Discover researchers, engineers, and scholars within the Qatar University technical
-                    ecosystem. Expand your academic reach.
+        <section class="trending-content">
+            <div class="trending-header">
+                <h1 class="trending-title">
+                    <span class="trending-icon-title">🔥</span>
+                    Popular &amp; <span class="highlight">Trending</span>
+                </h1>
+                <p class="trending-description">
+                    The most-followed members of the QUGeeks community,
+                    ranked by their follower count.
                 </p>
             </div>
 
-            <div id="profiles-grid" class="profiles-grid">
-            </div>
+            <div id="trending-list" class="trending-list"></div>
         </section>
     </main>
 </body>
